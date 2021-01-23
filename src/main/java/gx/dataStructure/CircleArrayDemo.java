@@ -19,10 +19,6 @@ public class CircleArrayDemo {
         boolean loop = true;
 
 
-
-
-
-
         //输出一个菜单
         while (loop){
             System.out.println("s(show): 显示队列");
