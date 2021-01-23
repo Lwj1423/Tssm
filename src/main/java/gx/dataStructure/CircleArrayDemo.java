@@ -18,6 +18,11 @@ public class CircleArrayDemo {
         Scanner scanner = new Scanner(System.in);
         boolean loop = true;
 
+
+
+
+
+
         //输出一个菜单
         while (loop){
             System.out.println("s(show): 显示队列");
