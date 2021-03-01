@@ -29,6 +29,10 @@ class XiaoWang extends LaoWang{
         @Override
         public void write() {
             System.out.println("这是小王的方法");
+
+
+
+
         }
     }
 
