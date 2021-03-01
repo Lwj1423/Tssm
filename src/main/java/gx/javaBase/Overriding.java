@@ -2,7 +2,7 @@ package gx.javaBase;
 
 /**
  * 重写
- * 测试提交方式
+ *
  */
 public class Overriding {
 
