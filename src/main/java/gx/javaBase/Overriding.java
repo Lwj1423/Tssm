@@ -9,6 +9,7 @@ class Overriding {
 
     public static void main(String[] args) {
         LaoWang laoWang = new XiaoWang();
+        System.out.println("github");
         laoWang.write();
     }
 }
