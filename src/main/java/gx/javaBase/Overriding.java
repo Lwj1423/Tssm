@@ -4,7 +4,7 @@ package gx.javaBase;
  * 重写
  * 测试提交方式
  */
-class Overriding {
+public class Overriding {
 
 
     public static void main(String[] args) {
