@@ -15,8 +15,16 @@
 
     </context:component-scan>
 
+    <!--开启SpringMVC注解的支持-->
+    <mvc:annotation-driven/>
+
+
+    <!-- 静态资源默认servlet配置 -->
+    <mvc:default-servlet-handler/>
+
     <!--配置的视图解析器对象-->
     <bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
         <property name="prefix" value="/WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
@@ -24,6 +32,6 @@
     <mvc:resources location="/css" mapping="/css/**"/>
     <mvc:resources location="/images/" mapping="/images/**"/>
     <mvc:resources location="/js/" mapping="/js/**"/>
-    <!--开启SpringMVC注解的支持-->
-    <mvc:annotation-driven/>
+
+
 </beans>

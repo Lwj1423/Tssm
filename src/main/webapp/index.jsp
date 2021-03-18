@@ -6,7 +6,7 @@
 
 <h3>测试包</h3>
 
-<form action="/demo/save" method="post">
+<form action="demo/save" method="post">
     姓名：<input type="text" name="name" /><br/>
     金额：<input type="text" name="money" /><br/>
     <input type="submit" value="保存"/><br/>

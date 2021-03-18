@@ -28,6 +28,11 @@ public class DemoControl {
 
     @RequestMapping("/demo/save")
     public void save(Account account, HttpServletRequest request, HttpServletResponse response) throws IOException {
+        System.out.println(account.getId() +"1111");
+        if(account.getId() == null|| account.getName().isEmpty()){
+            System.out.print("用户不能为空!!!");
+            return;
+        }
         demoService.saveAccount(account);
         response.sendRedirect(request.getContextPath()+"/demo/findAll");
     }

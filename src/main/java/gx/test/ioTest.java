@@ -35,14 +35,14 @@ public class ioTest {
     public  void Test01() throws IOException {
             File f = new File("E:\\test\\Test.txt");
             if (f.exists()) { // 判断文件或目录是否存在
-                if (f.isFile()) {
-                    BufferedReader br = new BufferedReader(new FileReader("E:\\test\\Test.txt"));//该缓冲流有一个readLine()独有方法
-                    String s = null;
-                    while ((s = br.readLine()) != null) {//readLine()每次读取一行
-                        System.out.println(s);
-                    }
+            if (f.isFile()) {
+                BufferedReader br = new BufferedReader(new FileReader("E:\\test\\Test.txt"));//该缓冲流有一个readLine()独有方法
+                String s = null;
+                while ((s = br.readLine()) != null) {//readLine()每次读取一行
+                    System.out.println(s);
                 }
             }
+        }
     }
 
 

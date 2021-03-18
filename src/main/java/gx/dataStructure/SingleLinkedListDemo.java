@@ -12,11 +12,8 @@ public class SingleLinkedListDemo {
         HeroNode hero3 = new HeroNode(3,"小三","一三");
         HeroNode hero4 = new HeroNode(4,"小四","一四");
 
-
-
         //创建链表
         SingleLinkedList linkedList = new SingleLinkedList();
-
         //添加数据
       /*  linkedList.add(hero1);
         linkedList.add(hero3);
