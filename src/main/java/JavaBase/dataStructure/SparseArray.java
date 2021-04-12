@@ -1,4 +1,4 @@
-package gx.dataStructure;
+package JavaBase.dataStructure;
 
 public class SparseArray {
 

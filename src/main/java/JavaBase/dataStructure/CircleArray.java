@@ -1,4 +1,4 @@
-package gx.dataStructure;
+package JavaBase.dataStructure;
 
 /**
  * 数组模拟环形队列

@@ -1,4 +1,4 @@
-package gx.mainUtil;
+package JavaBase.mainUtil;
 
 public class YangHuiTriangle_01 {
     public static void main(String[] args) {

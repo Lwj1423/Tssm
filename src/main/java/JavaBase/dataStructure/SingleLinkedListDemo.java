@@ -1,4 +1,4 @@
-package gx.dataStructure;
+package JavaBase.dataStructure;
 
 /**
  * 定义HeroNode,每个heroNode 对象就是一个节点

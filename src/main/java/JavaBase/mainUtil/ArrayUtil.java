@@ -1,4 +1,4 @@
-package gx.mainUtil;
+package JavaBase.mainUtil;
 
 
 /**
