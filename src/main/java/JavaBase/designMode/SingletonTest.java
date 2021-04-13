@@ -7,6 +7,7 @@ public class SingletonTest {
 
     public static void main(String[] args) {
 
+        
         //饿汉
         Bank bank1 = Bank.getInstance();
         Bank bank2 = Bank.getInstance();
