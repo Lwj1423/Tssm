@@ -2,6 +2,9 @@ package JavaBase.mainUtil;
 
 import java.util.Scanner;
 
+/**
+ * 工具类
+ */
 public class CMUtility {
     private static Scanner scanner = new Scanner(System.in);
 

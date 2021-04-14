@@ -1,5 +1,8 @@
 package JavaBase.mainUtil;
 
+/**
+ * 杨辉三角
+ */
 public class YangHuiTriangle_01 {
     public static void main(String[] args) {
         //1.声明并初始化二维数组
