@@ -3,7 +3,7 @@ package JavaBase.demo;
 import JavaBase.mainUtil.CMUtility;
 
 /**
- * 客户信息展示
+ * 客户信息展示  项目二
  */
 public class CustomerTest {
 
