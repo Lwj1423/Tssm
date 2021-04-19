@@ -1,5 +1,10 @@
 package JavaBase.demo;
 
+import JavaBase.java.MyException;
+
+/**
+ * 自定义异常练习
+ */
 public class ExceptionTest {
 
     public static void main(String[] args) {

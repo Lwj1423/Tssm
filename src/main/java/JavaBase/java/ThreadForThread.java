@@ -2,10 +2,10 @@ package JavaBase.java;
 
 /**
  * 多线程的创建 方法一
- *
+ *方法一：继承Thread类
  */
 
-public class Thread {
+public class ThreadForThread {
     public static void main(String[] args) {
         //3.创建子类对象
         MyThread myThread = new MyThread();
@@ -22,9 +22,9 @@ public class Thread {
     }
 }
 
-//方法一：继承Thread类
+
 //1.继承Thread
-class MyThread extends java.lang.Thread {
+class MyThread extends Thread {
     //2.重写Thread类的run()
     @Override
     public void run() {
