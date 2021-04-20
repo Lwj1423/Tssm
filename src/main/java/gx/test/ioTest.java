@@ -45,6 +45,22 @@ public class ioTest {
         }
     }
 
+    @Test
+    public void test02(){
+
+        label:for(int i = 1; i<= 40; i++){
+            for (int j=1; j< 3; j++){
+                if (i == j){
+                    System.out.println(111);
+                    break label;
+                }
+            }
+            System.out.println(i);
+        }
+
+
+    }
+
 
 
 }
