@@ -15,14 +15,17 @@ public class ThreadMethod {
         helloThread.setName("线程命名");
         helloThread.start();
 
-        for (int  i = 0; i < 1000; i ++){
-            if (i % 2 != 0){
-                System.out.println(Thread.currentThread().getName());
+
+            for (int i = 0; i < 1000; i++) {
+                if (i % 2 != 0) {
+                    System.out.println(Thread.currentThread().getName());
+                }
+                if (i % 20 == 0) {
+                    Thread.currentThread().yield();
+                }
             }
-            if (i % 20 == 0){
-                yield();
-            }
-        }
+
+        //线程级别
         System.out.println(helloThread.getPriority());
     }
 }
