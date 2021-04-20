@@ -1,6 +1,4 @@
-package JavaBase.java;
-
-import static java.lang.Thread.yield;
+package JavaBase.java.Thread;
 
 /**
  * 线程常用方法

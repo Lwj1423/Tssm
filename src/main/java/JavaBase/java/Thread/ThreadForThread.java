@@ -1,4 +1,4 @@
-package JavaBase.java;
+package JavaBase.java.Thread;
 
 /**
  * 多线程的创建 方法一
