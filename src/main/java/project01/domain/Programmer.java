@@ -1,6 +1,6 @@
-package project.domain;
+package project01.domain;
 
-import project.service.Status;
+import project01.service.Status;
 
 /**
  * 程序员

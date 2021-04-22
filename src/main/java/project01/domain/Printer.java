@@ -1,4 +1,4 @@
-package project.domain;
+package project01.domain;
 
 public class Printer implements Equipment {
 
