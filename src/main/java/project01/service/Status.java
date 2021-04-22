@@ -3,7 +3,7 @@ package project01.service;
 /**
  * 表示员工状态的枚举
  */
-public class Status {
+/*public class Status {
 
     private  final String name;
     private Status(String name) {
@@ -22,4 +22,11 @@ public class Status {
     public String toString() {
         return name ;
     }
+}*/
+
+/**
+ * 状态枚举类
+ */
+public enum Status{
+    FREE,BUSY,VOCATION;
 }

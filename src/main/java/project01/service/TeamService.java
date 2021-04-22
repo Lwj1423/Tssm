@@ -43,10 +43,16 @@ public class TeamService {
         }
         //该员工已经在另一个团队或者正在休假，无法添加
         Programmer p = (Programmer) e;
-        if ("BUSY".equals(p.getStatus().getName())){
+        /*if ("BUSY".equals(p.getStatus().getName())){
             throw new MyException("该员工已是某团队成员");
         }else if ("VOCATION".equals(p.getStatus().getName())){
             throw new MyException("该员工正在休假，无法添加");
+        }*/
+        switch (p.getStatus()){
+            case BUSY:
+                throw new MyException("该员工已是某团队成员");
+            case VOCATION:
+                throw new MyException("该员工正在休假，无法添加");
         }
 
 
