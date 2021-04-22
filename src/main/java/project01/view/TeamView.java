@@ -1,11 +1,10 @@
-package project.view;
+package project01.view;
 
-import JavaBase.demo.MyException;
-import JavaBase.mainUtil.CMUtility;
-import project.domain.Employee;
-import project.domain.Programmer;
-import project.service.NameListService;
-import project.service.TeamService;
+import JavaBase.java.MyException;
+import project01.domain.Employee;
+import project01.domain.Programmer;
+import project01.service.NameListService;
+import project01.service.TeamService;
 
 /**
  * 项目展示页面

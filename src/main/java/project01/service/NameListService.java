@@ -1,9 +1,9 @@
-package project.service;
+package project01.service;
 
-import JavaBase.demo.MyException;
-import project.domain.*;
+import JavaBase.java.MyException;
+import project01.domain.*;
 
-import static project.service.Data.EMPLOYEES;
+import static project01.service.Data.EMPLOYEES;
 
 /**
  * 1.负责将Data中的数据封装到Employee[]数组中

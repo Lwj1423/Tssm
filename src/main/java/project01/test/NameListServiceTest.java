@@ -1,9 +1,9 @@
-package project.test;
+package project01.test;
 
-import JavaBase.demo.MyException;
+import JavaBase.java.MyException;
 import org.junit.Test;
-import project.domain.Employee;
-import project.service.NameListService;
+import project01.domain.Employee;
+import project01.service.NameListService;
 
 public class NameListServiceTest {
 
