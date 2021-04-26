@@ -5,6 +5,9 @@ import org.junit.Test;
 import java.io.*;
 import java.util.Properties;
 
+/**
+ * 文件获取
+ */
 public class FileTest {
 
     @Test

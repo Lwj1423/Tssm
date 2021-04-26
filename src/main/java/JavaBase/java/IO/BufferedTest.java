@@ -3,7 +3,7 @@ package JavaBase.java.IO;
 import java.io.*;
 
 /**
- * 视频   加密  解密
+ * 缓冲流 :视频   加密  解密
  */
 public class BufferedTest {
 
