@@ -16,7 +16,7 @@ import java.net.Socket;
  *  例1: 客户端发送信息给服务端
  *       服务端显示数据
  */
-public class TcpTest {
+public class TcpTest01 {
 
         //客户端
         @Test
