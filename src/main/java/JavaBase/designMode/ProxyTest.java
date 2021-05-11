@@ -1,68 +1,93 @@
 package JavaBase.designMode;
 
-/**
- * 代理模式: 静态代理
- */
-public class ProxyTest {
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
 
-    public static void main(String[] args) {
-        StarProxy starProxy = new StarProxy(new StarImpl());
-        starProxy.confer();
-        starProxy.sing();
-        starProxy.signContract();
-    }
-}
+/**
+ * 动态代理 举例
+ * 
+ */
 
 //定义规范
-interface Star{
-    void confer(); //面谈
+interface Human{
 
-    void sing();//唱歌
+    String getBelief();
 
-    void signContract(); //签合同
+    void eat(String food);
 }
 
-//被代理类实现规范
-class StarImpl implements Star{
+//定义被代理类
+class SuperMan implements Human{
 
     @Override
-    public void confer() {
-
+    public String getBelief() {
+        return "I beleve I can fly!";
     }
 
     @Override
-    public void sing() {
-        System.out.println("鹿晗只负责唱歌！！！！！");
-    }
-
-    @Override
-    public void signContract() {
-
+    public void eat(String food) {
+        System.out.println(food);
     }
 }
 
-//代理类实现规范
-class StarProxy implements Star{
+//动态创建代理类
+class ProxyFactory{
+        public static Object getProxyInstance(Object obj){//obj:被代理对象
+            MyInvocationHandler handler = new MyInvocationHandler();
 
-    //被代理类
-    private StarImpl star;
+            handler.bind(obj);
 
-    public StarProxy(StarImpl star) {
-        this.star = star;
+            return Proxy.newProxyInstance(obj.getClass().getClassLoader(),obj.getClass().getInterfaces(),handler);
+        }
+}
+
+class MyInvocationHandler implements InvocationHandler{
+
+    private Object obj;
+
+    public void bind(Object obj){
+        this.obj = obj;
     }
 
+    //当通过代理类对象,调用方法时,自动调用invoke方法
+    //将被代理类要执行的方法 的功能声明在invoke中
     @Override
-    public void confer() {
-        System.out.println("代理会面谈");
+    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        return method.invoke(obj,args);
+    }
+}
+
+//模拟AOP
+class HumanUtil{
+
+    public void method1(){
+        System.out.println("====方法一=====");
     }
 
-    @Override
-    public void sing() {
-        star.sing();
+    public void method2(){
+        System.out.println("====方法二=====");
     }
 
-    @Override
-    public void signContract() {
-        System.out.println("代理会签合同");
+}
+
+
+public class ProxyTest {
+    public static void main(String[] args) {
+
+        //增加方法
+        new HumanUtil().method1();
+
+        SuperMan superMan = new SuperMan();
+        Human proxyInstance  = (Human) ProxyFactory.getProxyInstance(superMan);
+
+        proxyInstance.getBelief();
+        proxyInstance.eat("测测测");
+
+        new HumanUtil().method2();
     }
+
+
+
+
 }

@@ -1,7 +1,7 @@
 package JavaBase.designMode;
 
 /**
- * 单例模式
+ * 单例模式  线程安全
  */
 public class SingletonTest {
 
@@ -56,12 +56,24 @@ class Order{
     private static Order instance = null;
 
     //创建公共静态方法
-    public static Order getInstance(){
-        if (instance == null){
-            instance = new Order();
+    public static Order getInstance() {
+        //考虑线程安全  方式一：效率稍差
+       /* synchronized (Order.class) {
+            if (instance == null) {
+                instance = new Order();
+            }
+            return instance;
         }
+*/
+        //方式二  效率更高
+        if (instance == null) {
+            synchronized (Order.class) {
+                if (instance == null) {
+                    instance = new Order();
+                }
 
+            }
+        }
         return instance;
     }
-
 }
