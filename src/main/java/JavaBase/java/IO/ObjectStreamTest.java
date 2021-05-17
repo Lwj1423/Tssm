@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.io.*;
 
 /**
- * 对象流的使用
+ * 对象流的使用  序列化 和 反序列化
  */
 public class ObjectStreamTest {
 

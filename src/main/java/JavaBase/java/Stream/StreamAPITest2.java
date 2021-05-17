@@ -68,7 +68,7 @@ public class StreamAPITest2 {
         List<Employee> employees = EmployeeData.getEmployees();
         Stream<Double> doubleStream = employees.stream().map(Employee::getSalary);
         Optional<Double> sumMoney = doubleStream.reduce((d1, d2) -> d1 + d2);
-        System.out.println(sumMoney);
+        System.out.println(sumMoney.get());
     }
 
     // 3. 收集
